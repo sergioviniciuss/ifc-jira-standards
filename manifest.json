@@ -1,0 +1,30 @@
+{
+	"manifest_version": 2,
+	"name": "IFC JIRA Standards Comments Extension",
+	"version": "1.0",
+	"description" : "Allow users to use templates to comment by keeping information in standards",
+	"icons": {
+		"128": "icon128.png",
+		"48": "icon48.png",
+		"16": "icon16.png"
+	},
+	"page_action" : {
+		"default_icon": "icon16.png",
+		"default_popup": "popup.html",
+		"default_title": "IFC JIRA STANDARDS"
+	},
+	"background": {
+		"scripts" : ["eventPage.js"],
+		"persistent": false
+	},
+	"content_scripts": [
+		{
+			"matches": ["https://lab.accurate.com.br/request/browse/*"],
+			"js": ["content.js","jquery-3.2.1.min.js"]
+		}
+	],
+	"permissions" : [
+		"tabs",
+		"https://lab.accurate.com.br/request/browse/*"
+	]
+}

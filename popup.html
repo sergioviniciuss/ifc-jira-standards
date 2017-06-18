@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>IFC JIRA Templates para comentarios de tasks</title>
+		<script src="jquery-3.2.1.min.js"></script>
+		<script src="popup.js"></script>
+		<style>
+			body {
+				min-width: 250px;
+				min-height: 150px;
+			}
+			.title {
+				color: orange;
+			}
+		</style>
+	</head>
+	<body>
+		<h3 class="title">Infracommerce Jira Standards for Developers</h3>
+		<p >Comentar como: </p>
+		<input type="radio" name="templateType" value="developer">Desenvolvedor
+		<input type="radio" name="templateType" value="tester">Testador
+		<br />
+		<br />
+		<input type="submit" id="setTemplate" value="Aplicar Template">
+	</body>
+</html>
